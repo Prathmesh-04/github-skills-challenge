@@ -40,4 +40,4 @@ jobs:
           MINIMUM_ORANGE: 70
 
       - name: Enforce minimum coverage
-        run: python -m coverage report --fail-under=55
+        run: python -m coverage report --fail-under=90
