@@ -12,4 +12,5 @@ class EventTopic:
         return list(self.messages)
 
     def clear(self):
+        # Missing from coverage because tests do not clear a topic.
         self.messages.clear()

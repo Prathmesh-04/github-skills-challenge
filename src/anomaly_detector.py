@@ -17,13 +17,16 @@ class AnomalyDetector:
         if record["response_time_ms"] > self.response_time_threshold:
             reasons.append("High response time")
 
+        # Missing from coverage because current tests use CPU below its threshold.
         if record["cpu_percent"] > self.cpu_threshold:
             reasons.append("High CPU utilization")
 
+        # Missing from coverage because current tests use memory below its threshold.
         if record["memory_percent"] > self.memory_threshold:
             reasons.append("High memory utilization")
 
         # INTENTIONAL ASSESSMENT ISSUE
+        # Missing from coverage because current tests use INFO or ERROR log levels.
         if record["log_level"] == "WARNING":
             reasons.append("Error log detected")
 

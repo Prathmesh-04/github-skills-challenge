@@ -7,11 +7,13 @@ from event_topic import EventTopic
 
 
 def load_data(file_path):
+    # Missing from coverage because current tests do not load a data file.
     with open(file_path, "r", encoding="utf-8") as file:
         return json.load(file)
 
 
 def run_pipeline(file_path):
+    # Missing from coverage because current tests do not exercise pipeline orchestration.
     data = load_data(file_path)
 
     # INTENTIONAL ASSESSMENT ISSUE #2
@@ -43,6 +45,7 @@ def run_pipeline(file_path):
 
 
 if __name__ == "__main__":
+    # Missing from coverage because tests import this module instead of running it as a script.
     result = run_pipeline("data/service_data.json")
 
     print("=" * 50)
