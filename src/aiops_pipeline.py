@@ -6,6 +6,7 @@ from event_producer import EventProducer
 from event_topic import EventTopic
 
 # adding this for checking workflow
+# adding this for another check
 
 def load_data(file_path):
     # Missing from coverage because current tests do not load a data file.
